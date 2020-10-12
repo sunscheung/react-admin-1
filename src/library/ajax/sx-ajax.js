@@ -37,11 +37,11 @@ export default class SXAjax {
      * @param reject 出错是否进行reject 默认true
      */
     constructor({
-                    onShowSuccessTip = (/* response, successTip  */) => true,
-                    onShowErrorTip = (/* err, errorTip */) => true,
-                    isMock = (/* url, data, method, options */) => false,
-                    reject = true,
-                } = {}) {
+        onShowSuccessTip = (/* response, successTip  */) => true,
+        onShowErrorTip = (/* err, errorTip */) => true,
+        isMock = (/* url, data, method, options */) => false,
+        reject = true,
+    } = {}) {
         this.instance = axios.create();
         this.mockInstance = axios.create();
         this.setDefaultOption(this.instance);
